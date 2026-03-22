@@ -1,0 +1,29 @@
+# Node
+node_modules/
+npm-debug.log*
+*.log
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/tests/demoTests.spec.ts
+
+# Environment Variables
+*.env
+.env*
+
+# IDE / Editors
+.vscode/
+.idea/
+
+# OS / System
+.DS_Store
+Thumbs.db
+
+# Build & Coverage
+dist/
+build/
+coverage/

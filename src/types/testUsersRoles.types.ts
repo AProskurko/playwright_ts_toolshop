@@ -1,0 +1,1 @@
+export type TestUsers = "admin" | "user1" | "user2" | "user3" | "newUser" 
