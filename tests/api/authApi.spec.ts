@@ -1,6 +1,6 @@
 import { test, expect } from '@fixtures/base.fixture';
 import { IAuthApiTestCase } from '@app-types/testCases.interfaces';
-import jsonData from '@data/testCases/api/auth.api.data.json'
+import jsonData from '@data/testCases/api/auth.api.data.json' with { type: 'json' };
 
 const testCases = jsonData as IAuthApiTestCase[]
 
