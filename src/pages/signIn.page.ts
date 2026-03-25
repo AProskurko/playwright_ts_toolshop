@@ -1,6 +1,7 @@
 import { Page, Locator } from "@playwright/test";
 import { BasePage } from "./basePage.page";
 import { faker } from '@faker-js/faker';
+// const { faker } = await import('@faker-js/faker');
 import { generateComplexPassword } from "@utils/faker/shuffle";
 
 export class SignInPage extends BasePage {
