@@ -9,8 +9,13 @@
     "test:headed": "playwright test --headed",
     "report": "playwright show-report"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automation",
+    "testing"
+  ],
+  "author": "Artem Proskurko",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
