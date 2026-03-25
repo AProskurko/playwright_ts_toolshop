@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
+    "test:ci": "playwright test",
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
     "report": "playwright show-report",
@@ -18,7 +19,7 @@
   ],
   "author": "Artem Proskurko",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@faker-js/faker": "^10.3.0",
     "@playwright/test": "^1.58.2",

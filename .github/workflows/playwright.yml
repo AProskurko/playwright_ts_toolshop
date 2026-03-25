@@ -34,7 +34,9 @@ jobs:
         run: npm run build --if-present
       
       - name: Run Playwright tests
-        run: npm test
+        run: npm run test:ci
+        env:
+          BASE_URL: https://practice.expandtesting.com/toolshop
       
       - name: Upload test results
         if: always()

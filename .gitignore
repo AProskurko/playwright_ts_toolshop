@@ -12,8 +12,6 @@ npm-debug.log*
 /tests/demoTests.spec.ts
 
 # Environment Variables
-*.env.local
-
 
 # IDE / Editors
 .vscode/
