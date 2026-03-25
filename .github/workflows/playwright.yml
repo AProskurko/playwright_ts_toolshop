@@ -36,7 +36,8 @@ jobs:
       - name: Run Playwright tests
         run: npm run test:ci
         env:
-          BASE_URL: https://practice.expandtesting.com/toolshop
+          BASE_URL: https://practicesoftwaretesting.com
+          API_URL: https://api.practicesoftwaretesting.com
       
       - name: Upload test results
         if: always()
