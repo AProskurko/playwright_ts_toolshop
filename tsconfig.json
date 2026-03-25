@@ -4,6 +4,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "lib": [
       "ES2022",
       "DOM"
