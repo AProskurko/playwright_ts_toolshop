@@ -30,6 +30,11 @@ const testCases: IAuthApiTestCase[] = [
 ]
 
 test.describe("API login tests", () => {
+
+  test(`Zero`, {tag: "@API-000"}, async () => {
+      expect(1).toBeTruthy()
+      })
+
   for (const testCase of testCases){
     test(`${testCase.testTitle}`, {tag: testCase.testId}, async ({ authApi }) => {
       const token = await authApi.fastLogin(testCase.user)
