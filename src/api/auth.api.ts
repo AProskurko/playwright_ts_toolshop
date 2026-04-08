@@ -82,7 +82,7 @@ export class AuthApi {
       switch (user) {
         case "admin":
           email = process.env.ADMIN_USER_EMAIL
-          password = process.env.ADMIN_USER_PASSWROD
+          password = process.env.ADMIN_USER_PASSWORD
           break;
         case "user1":
           email = process.env.USER_1_EMAIL
