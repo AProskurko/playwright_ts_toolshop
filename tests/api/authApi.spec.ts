@@ -8,11 +8,11 @@ const testCases: IAuthApiTestCase[] = [
     "user": "admin"
   },
   // TODO: fix non user1
-  // {
-  //   "testTitle": "Login as user1",
-  //   "testId": "@API-002",
-  //   "user": "user1"
-  // },
+  {
+    "testTitle": "Login as user1",
+    "testId": "@API-002",
+    "user": "user1"
+  },
   {
     "testTitle": "Login as user2",
     "testId": "@API-003",

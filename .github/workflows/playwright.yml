@@ -35,7 +35,7 @@ jobs:
           BASE_URL: https://practicesoftwaretesting.com
           API_URL: https://api.practicesoftwaretesting.com
 
-          ADMIN_USER_EMAIL: admin@practicesoftwaretesting.com	
+          ADMIN_USER_EMAIL: admin@practicesoftwaretesting.com
           ADMIN_USER_PASSWORD: welcome01
 
           USER_1_EMAIL: customer@practicesoftwaretesting.com
