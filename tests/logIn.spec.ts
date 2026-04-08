@@ -55,7 +55,7 @@ test.describe("Login Page", () => {
         if(testCase.loginMustPass){
           await logInPage.waitForPageLoad();
           await expect(logInPage.loginFailAlertText).toBeHidden()
-          await expect(page).toHaveURL(/\/?(account)\/?/i)
+          await expect(page).toHaveURL(/\/?(auth)\/?/i)
         } else {
           await expect(page).toHaveURL(/\/?(auth\/login)\/?/i)
           await expect(logInPage.loginFailAlertText).toBeVisible()
