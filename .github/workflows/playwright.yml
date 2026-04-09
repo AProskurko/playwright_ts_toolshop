@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Playwright TS Toolshop Tests
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 
 jobs:
   test:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     
     steps:
