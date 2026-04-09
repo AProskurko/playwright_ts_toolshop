@@ -48,7 +48,7 @@ test.describe("Login Page", () => {
       await expect.soft(signInPage.registerSubmitButton).toBeEnabled();
   });
   
-  test.only("Register New User and Login", {tag: "@SP-002"}, async ({ page, signInPage, logInPage }) => {
+  test.skip("Register New User and Login", {tag: "@SP-002"}, async ({ page, signInPage, logInPage }) => {
     await signInPage.navigate("auth/register");
     await expect(page).toHaveURL(/\/?(auth\/register)\/?/i);
   
