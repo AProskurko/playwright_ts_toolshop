@@ -2,7 +2,8 @@ import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 import path from 'path';
 
-dotenv.config({ path: path.resolve(process.cwd(), '.env.test') });
+const environment = process.env.TEST_ENV || 'test';
+dotenv.config({ path: path.resolve(process.cwd(), `.env.${environment}`) });
 
 export default defineConfig({
   testDir: "./tests",

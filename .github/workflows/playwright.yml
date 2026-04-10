@@ -27,8 +27,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install chromium --with-deps
       
-      - name: Build project
-        run: npm run build --if-present
+      # - name: Build project
+      #   run: npm run build --if-present
       
       - name: Run Playwright tests
         run: npm run test:ci
@@ -52,6 +52,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-${{ matrix.node-version }}
+          name: playwright-report-20.x
           path: playwright-report/
           retention-days: 30
