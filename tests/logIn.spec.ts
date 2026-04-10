@@ -5,8 +5,7 @@ import { env } from '../src/config/env';
 interface ITestCase {
   testTitle: string;
   testId: string;
-  login: string|null;
-  password: string|null;
+  getCredentials: () => { email: string | null; password: string | null };
   loginMustPass: boolean;
 }
 
@@ -14,15 +13,19 @@ const testCases = (): ITestCase[] => [
   {
     testTitle: "Valid LogIn",
     testId: "@LP-002",
-    login: env.USER_1_EMAIL,
-    password: env.USER_1_PASSWORD,
+    getCredentials: () => ({
+      email: env.USER_1_EMAIL,
+      password: env.USER_1_PASSWORD
+    }),
     loginMustPass: true
   },
   {
     testTitle: "Invalid LogIn",
     testId: "@LP-003",
-    login: faker.internet.email() as string,
-    password: faker.internet.password() as string,
+    getCredentials: () => ({
+      email: faker.internet.email(),
+      password: faker.internet.password()
+    }),
     loginMustPass: false
   }
 ]
@@ -49,9 +52,11 @@ test.describe("Login Page", () => {
   
   for (const testCase of testCases()){
       test(`${testCase.testTitle}`, {tag: testCase.testId}, async ({ page, logInPage }) => {
+        const { email, password} = testCase.getCredentials()
+
         await logInPage.navigate("auth/login");
   
-        await logInPage.submitLoginForm(testCase.login, testCase.password)
+        await logInPage.submitLoginForm(email, password)
   
         if(testCase.loginMustPass){
           await logInPage.waitForPageLoad();
