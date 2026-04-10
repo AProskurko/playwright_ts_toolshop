@@ -8,7 +8,6 @@ export interface AppFixtures {
     homePage: HomePage;
     logInPage: LogInPage;
     signInPage: SignInPage;
-
     authApi: AuthApi;
 }
 

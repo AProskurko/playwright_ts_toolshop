@@ -1,5 +1,6 @@
 import { test, expect } from '@fixtures/base.fixture';
 import { faker } from '@faker-js/faker';
+import { env } from '../src/config/env';
 
 // interface ITestCase {
 //   testTitle: string;
@@ -13,8 +14,8 @@ import { faker } from '@faker-js/faker';
 //   {
 //     testTitle: "Valid LogIn",
 //     testId: "@LP-002",
-//     login: process.env.USER_1_EMAIL ?? (() => {throw new Error('USER_1_EMAIL not set')})(),
-//     password: process.env.USER_1_PASSWORD ?? (() => {throw new Error('USER_1_PASSWORD not set')})(),
+//     login: env.USER_1_EMAIL ?? (() => {throw new Error('USER_1_EMAIL not set')})(),
+//     password: env.USER_1_PASSWORD ?? (() => {throw new Error('USER_1_PASSWORD not set')})(),
 //     loginMustPass: true
 //   },
 //   {

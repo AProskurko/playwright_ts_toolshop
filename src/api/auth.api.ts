@@ -2,6 +2,7 @@ import { faker } from "@faker-js/faker/locale/en";
 import { APIRequestContext, APIResponse, expect } from "@playwright/test";
 import { generateComplexPassword } from "@utils/faker/shuffle";
 import { TestUsers } from "src/types";
+import { env } from '../config/env';
 
 interface INewUserPayload {
   first_name: string;
@@ -19,10 +20,7 @@ interface INewUserPayload {
   };
 }
 
-const apiUrl = process.env.API_URL as string
-if (!apiUrl) {
-  throw new Error("CRITICAL: API_URL is missing!");
-}
+const apiUrl = env.API_URL
 
 export class AuthApi {
   constructor(private readonly request: APIRequestContext) {}
@@ -81,20 +79,20 @@ export class AuthApi {
       let password: string|undefined;
       switch (user) {
         case "admin":
-          email = process.env.ADMIN_USER_EMAIL
-          password = process.env.ADMIN_USER_PASSWORD
+          email = env.ADMIN_USER_EMAIL
+          password = env.ADMIN_USER_PASSWORD
           break;
         case "user1":
-          email = process.env.USER_1_EMAIL
-          password = process.env.USER_1_PASSWORD
+          email = env.USER_1_EMAIL
+          password = env.USER_1_PASSWORD
           break;
         case "user2":
-          email = process.env.USER_2_EMAIL
-          password = process.env.USER_2_PASSWORD
+          email = env.USER_2_EMAIL
+          password = env.USER_2_PASSWORD
           break;
         case "user3":
-          email = process.env.USER_3_EMAIL
-          password = process.env.USER_3_PASSWORD
+          email = env.USER_3_EMAIL
+          password = env.USER_3_PASSWORD
           break;
         case "newUser":
           ({email, password} = await this.registerUser())
